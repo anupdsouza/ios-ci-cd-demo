@@ -36,7 +36,7 @@ final class CalculatorTests: XCTestCase {
     
     func testAddition() {
         let calculator = Calculator()
-        XCTAssertTrue(calculator.performOperation("5", "10", operation: .add) == 15)
+        XCTAssertTrue(calculator.performOperation("5", "10", operation: .add) == 50)
         XCTAssertFalse(calculator.performOperation("5", "10", operation: .add) == 200)
         XCTAssertEqual(calculator.performOperation("5", "10", operation: .add), 15)
         XCTAssertNotEqual(calculator.performOperation("5", "10", operation: .add), 20)
