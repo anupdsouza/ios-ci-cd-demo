@@ -1,0 +1,28 @@
+name: Unit Tests
+# This workflow is triggered on pushes & pull requests to the repository.
+on:
+  push:
+    branches: [main, develop, feature/*]
+  pull_request:
+    branches: [main, develop, feature/*]
+  
+jobs:
+
+  build:
+    name: Build and test
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    
+    - name: Bundle install
+      run: bundle install
+
+    - name: Setup Xcode version #https://github.com/marketplace/actions/setup-xcode-version
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable #
+      
+    - name: Run unit tests
+      run: bundle exec fastlane unit_tests
