@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     
-    - name: Bundle install
+    - name: Update dependencies
       run: bundle install
 
     - name: Setup Xcode version #https://github.com/marketplace/actions/setup-xcode-version
@@ -25,4 +25,4 @@ jobs:
         xcode-version: latest-stable #
       
     - name: Run unit tests
-      run: bundle exec fastlane unit_tests
+      run: bundle exec fastlane scan
