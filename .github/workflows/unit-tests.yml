@@ -9,7 +9,7 @@ on:
 
 # Limit only the latest workflow created to run
 concurrency:
-  group: ${{ github.ref }}
+  group: build
   cancel-in-progress: true
 
 jobs:
