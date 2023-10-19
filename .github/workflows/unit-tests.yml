@@ -19,6 +19,9 @@ jobs:
     - name: Update dependencies
       run: bundle install
 
+    - name: Install build log formatter
+      run: brew install xcbeautify
+
     - name: Setup Xcode version #https://github.com/marketplace/actions/setup-xcode-version
       uses: maxim-lobanov/setup-xcode@v1
       with:

@@ -31,10 +31,10 @@ platform :ios do
 			prelaunch_simulator: true,
 			clean: true,
 			skip_build: true,
+            		xcodebuild_formatter: 'xcbeautify --renderer github-actions',
 			code_coverage: true,
 			output_types: 'html',
 			output_directory: "./fastlane/UnitTestsReport"
-            		xcodebuild_formatter: 'xcpretty'
         	)
 
 		xcov(
