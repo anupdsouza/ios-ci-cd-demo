@@ -31,7 +31,7 @@ platform :ios do
 			prelaunch_simulator: true,
 			clean: true,
 			skip_build: true,
-            		xcodebuild_formatter: 'xcbeautify --renderer github-actions',
+            		xcodebuild_formatter: 'xcbeautify -qq --is-ci --renderer github-actions',
 			code_coverage: true,
 			output_types: 'junit',
 			output_directory: "./fastlane/UnitTestsReport"
