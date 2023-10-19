@@ -33,7 +33,7 @@ platform :ios do
 			skip_build: true,
             		xcodebuild_formatter: 'xcbeautify --renderer github-actions',
 			code_coverage: true,
-			output_types: 'html',
+			output_types: 'junit',
 			output_directory: "./fastlane/UnitTestsReport"
         	)
 
