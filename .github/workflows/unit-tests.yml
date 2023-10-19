@@ -6,7 +6,12 @@ on:
     branches: [main, develop, feature/*]
   pull_request:
     branches: [main, develop, feature/*]
-  
+
+# Limit only the latest workflow created to run
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
 
   build:
