@@ -40,6 +40,7 @@ platform :ios do
 		xcov(
 			project: project,
 			scheme: scheme,
+			only_project_targets: true,
 			output_directory: "./fastlane/CodeCoverageReport"
   		)
 	end
